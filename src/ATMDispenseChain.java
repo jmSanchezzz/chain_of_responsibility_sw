@@ -7,13 +7,16 @@ public class ATMDispenseChain implements DispenseChain {
         DispenseChain c2 = new Peso500Dispenser();
         DispenseChain c3 = new Peso200Dispenser();
         DispenseChain c4 = new Peso100Dispenser();
-        DispenseChain c5 = new Peso20Dispenser();
+        DispenseChain c5 = new Peso50Dispenser();
+        DispenseChain c6 = new Peso20Dispenser();
 
         // Set the chain of responsibility
         nextChain.setNextChain(c2);
         c2.setNextChain(c3);
         c3.setNextChain(c4);
         c4.setNextChain(c5);
+        c5.setNextChain(c6);
+
     }
 
     @Override

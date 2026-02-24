@@ -1,5 +1,4 @@
-
-# Chain of Responsibility
+# chain_of_responsibility_sw
 
 In this implementation, the `ATMDispenseChain` class sets up and manages the dispensing logic for BPI’s ATM system with denominations of 1000, 500, 200, 100, and 20 peso bills. The `BPI_Atm` class allows users to adjust a (hard-coded) amount and initiates the dispensing process using the Chain of Responsibility pattern.
 
@@ -17,6 +16,9 @@ Client: The client is the `BPI_Atm` class. It creates and initializes the chain 
 
 Context: The context includes `ATMDispenseChain` (wiring and delegation), `Currency` (request data), `DispenseChain` (the handler contract), and the concrete dispenser classes that handle each denomination.
 
+## Run
 
-
-
+```bash
+javac src/*.java
+java -cp src BPI_Atm
+```
